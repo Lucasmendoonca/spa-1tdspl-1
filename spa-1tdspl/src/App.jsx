@@ -1,31 +1,36 @@
-import Cabecalho from "./components/Cabecalho";
-import Conteudo from "./components/Secao";
-import Rodape from "./components/Rodape.jsx";
-import viteLogo from "./assets/vite.svg";
+import Lista from "./components/Lista";
+import Rodape from "./components/rodape";
+import Secao from "./components/secao";
+import ViteLogo from "./assets/vite.svg";
 
-export default function App() {
 
-  //Área declarativa
-  let viteAlt = "Vite Logo"
-  
-  return(
-    <>
+export default function App(){
+//   // area declarativa
+// let nome = "Mariana";
 
-      {/* Área imperativa */}
-      
-      {/* Vamos criar um cabeçalho com um header, h1 com um título e uma lista ul com items com links*/}
-      <Cabecalho/>
+//   return(
+//     <>
+//     {/*ou começa com a div, ou começa com fragment*/}
 
-      {/* Vamos criar uma Seção com uma section, uma div com 2 parágrafos cada um com 3 linhas de loreme depois dos parágrafos uma imagem */}
-      <Conteudo viteLogoProps = {viteLogo} viteAltProps = {viteAlt}/>
+//   {/*área imperativa*/}
+//   <h1>App</h1>
+//   <h2>Meu nome é {nome}</h2>
+//   </>
+// );
 
-      {/* Vamos criar um rodapé com uma div, uma lista e 3 items com links para redes sociais, 
-       um parágrafo com o texto de direiros autorais e o código do símbolo de copyright. */}
-      <Rodape/>
+let ViteAlt = "Vite Logo"
 
-    </>
+return(
+  <>
+  {/* vamos criar  um cabeçalho com o header,  um h1 com um título e uma lista ul com itens link */}
 
-  );
+  <Lista/>
 
-}
+  {/* Vamos criar uma seção com uma section, uma div com 2 paragrafo, cada um com 3 linhas de lorem e depois dos parágrafos, uma imagem */}
+  <Secao viteLogoProps={ViteLogo} viteAltProps={ViteAlt}/>
 
+  {/* Vamos criar um rodapé com uma div, uma lista ul e 3 itens com link para redes sociais, um parágrafo */}
+  <Rodape/>
+  </>
+);
+  }
