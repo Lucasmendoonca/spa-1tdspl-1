@@ -1,5 +1,5 @@
 import Cabecalho from "./components/Cabecalho";
-import Conteudo from "./components/Conteudo";
+import Conteudo from "./components/Secao";
 import Rodape from "./components/Rodape.jsx";
 import viteLogo from "./assets/vite.svg";
 
@@ -22,9 +22,10 @@ export default function App() {
       {/* Vamos criar um rodapé com uma div, uma lista e 3 items com links para redes sociais, 
        um parágrafo com o texto de direiros autorais e o código do símbolo de copyright. */}
       <Rodape/>
-       
+
     </>
 
   );
 
 }
+
