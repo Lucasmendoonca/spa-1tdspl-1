@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Cabecalho from "./components/Cabecalho";
+import Conteudo from "./components/Conteudo";
+import Rodape from "./components/Rodape.jsx";
+import viteLogo from "./assets/vite.svg";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
-  return (
+  //Área declarativa
+  let viteAlt = "Vite Logo"
+  
+  return(
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      {/* Área imperativa */}
+      
+      {/* Vamos criar um cabeçalho com um header, h1 com um título e uma lista ul com items com links*/}
+      <Cabecalho/>
+
+      {/* Vamos criar uma Seção com uma section, uma div com 2 parágrafos cada um com 3 linhas de loreme depois dos parágrafos uma imagem */}
+      <Conteudo viteLogoProps = {viteLogo} viteAltProps = {viteAlt}/>
+
+      {/* Vamos criar um rodapé com uma div, uma lista e 3 items com links para redes sociais, 
+       um parágrafo com o texto de direiros autorais e o código do símbolo de copyright. */}
+      <Rodape/>
+       
     </>
-  )
+
+  );
+
 }
 
 export default App
