@@ -1,8 +1,10 @@
+import { ListaProdutos } from "../components/ListaProdutos"; 
+
 export default function Produtos() { 
     return ( 
         <div>
-            <h1> Componente Produtos </h1>
-            <p> Onde os produtos nascem </p>
+            <h1> Produtos de INFORMÁTICA - FIPAPI </h1>
+            <p> Os melhores produtos do mercado :D </p>
 
         </div>
     )

@@ -1,7 +1,7 @@
 export default function Cabecalho() {
     return (
         <>
-        
+      
       <header>
         <h1>Vite + React / Coded By - RM550871</h1>
           <ul>
