@@ -12,7 +12,7 @@ export default function Rodape() {
             <div>
                 <ul>
                     <li><a href="#">Github</a></li>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">X</a></li>
                     <li><a href="#">Linkedin</a></li>
                 </ul>
                 <p>&copy; Todos os meus direitos reservados 2021</p>
