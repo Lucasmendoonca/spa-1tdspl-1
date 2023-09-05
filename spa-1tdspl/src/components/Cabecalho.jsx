@@ -1,16 +1,17 @@
-export default function Cabecalho() {
-    return (
-        <>
-      
+import { createElement } from "react";
+
+export default function Cabecalho(props) {
+  return (
+    <>
       <header>
-        <h1>Vite + React / Coded By - Marii 😚 </h1>
-          <ul>
-            <li><a href="#">Item - 1</a></li>
-            <li><a href="#">Item - 2</a></li>
-            <li><a href="#">Item - 3</a></li>
-          </ul>
+        <h1>Vite + React / coded by Marii 😚</h1>
+        <ul>
+          {props.children.map((item, indice) => {
+            createElement("li", { key: indice }, item);
+            return item;
+          })}
+        </ul>
       </header>
-        
-        </>
-    )
+    </>
+  );
 }

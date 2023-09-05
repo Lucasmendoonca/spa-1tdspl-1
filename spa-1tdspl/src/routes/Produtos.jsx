@@ -1,30 +1,38 @@
-import { ListaProdutos } from "../components/ListaProdutos"; 
+import { Link } from "react-router-dom";
+import { ListaProdutos } from "../components/ListaProdutos";
 
-export default function Produtos() { 
-    return ( 
-        <div>
-            <h1> Produtos de INFORMÁTICA - FIPAPI </h1>
-            <p> Os melhores produtos do mercado :D </p>
+export default function Produtos() {
 
-                <table style={{borderCollapse:"collapse" ,  border:"2px solid  #ffff"}}> 
-                    <thead> 
-                        <tr> 
-                            <th style={{border:"2px solid #ffffff"}}>ID</th>
-                            <th style={{border:"2px solid #ffffff"}}>NOME</th>
-                            <th style={{border:"2px solid #ffffff"}}>DESCRIÇÃO</th>
-                            <th style={{border:"2px solid #ffffff"}}>PREÇO</th>
-                        </tr>     
-                    </thead> 
-                    
-                    <tbody>
+  return (
+    <div>
+        <h1>Produtos de INFORMÁTICA - FIPAPI</h1>
+        <p>Os Melhores Produtos do Mercado</p>
+        
+        <table style={{borderCollapse:"collapse" , border:"2px solid #ffffff"}}>
+            <thead>
+                <tr>
+                    <th style={{border:"2px solid #ffffff"}}>ID</th>
+                    <th style={{border:"2px solid #ffffff"}}>NOME</th>
+                    <th style={{border:"2px solid #ffffff"}}>DESCRIÇÃO</th>
+                    <th style={{border:"2px solid #ffffff"}}>PREÇO</th>
+                    <th style={{border:"2px solid #ffffff"}}>EDITAR</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
                 {ListaProdutos.map((produto,indice)=>(
-                    <tr key={indice}>
+
+                      <tr key={indice}>
                         <td style={{border:"2px solid #ffffff"}}>{produto.id}</td>
                         <td style={{border:"2px solid #ffffff"}}>{produto.nome}</td>
                         <td style={{border:"2px solid #ffffff"}}>{produto.desc}</td>
                         <td style={{border:"2px solid #ffffff"}}>{produto.preco}</td>
-                    </tr>
-                            
+                        <td style={{border:"2px solid #ffffff"}}>
+                            <Link to={`/editar/produtos/${produto.id}`}>Editar</Link>
+                        </td>
+                      </tr>
+
                 ))}
             </tbody>
 
@@ -34,11 +42,9 @@ export default function Produtos() {
                 </tr>
             </tfoot>
         </table>
-            
-
-                
+        
 
 
-        </div>
-    )
+    </div>
+  )
 }
