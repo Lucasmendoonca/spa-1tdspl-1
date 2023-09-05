@@ -3,7 +3,7 @@ export default function Cabecalho() {
         <>
       
       <header>
-        <h1>Vite + React / Coded By - RM550871</h1>
+        <h1>Vite + React / Coded By - Marii 😚 </h1>
           <ul>
             <li><a href="#">Item - 1</a></li>
             <li><a href="#">Item - 2</a></li>
